@@ -6,5 +6,12 @@ go_binary {
   pkg: "github.com/gogaeva/build-system/build/cmd/bood",
 
   // Build inputs.
-  srcs: ["**/*.go", "../go.mod"]
+  srcs: ["**/*.go", "../go.mod"],
+  srcsExclude: ["**/*_test.go"],
+  
+  // Package to test.
+  testPkg: "github.com/gogaeva/build-system/build/gomodule",
+
+  //Test inputs.
+  testSrcs: ["**/*_test.go"],
 }
