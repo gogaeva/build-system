@@ -1,0 +1,16 @@
+language: go
+go:
+  - 1.5
+
+addons:
+  apt:
+    packages:
+      - ninja-build
+
+before_script:
+  - cd ./build
+  - go build cmd/bood/main.go
+  
+script:
+  - ./main
+  - cd ../example && ../build/out/bin/bood
