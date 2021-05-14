@@ -13,4 +13,3 @@ before_script:
   
 script:
   - ./main
-  - cd ../example && ../build/out/bin/bood
