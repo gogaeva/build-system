@@ -15,3 +15,9 @@ go_binary {
   //Test inputs.
   testSrcs: ["**/*_test.go"],
 }
+
+go_doc {
+  name: "gomodule",
+  pkg: "github.com/gogaeva/build-system/build/gomodule",
+  srcs: ["**/*.go"],
+}

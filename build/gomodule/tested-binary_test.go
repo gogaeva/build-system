@@ -23,7 +23,6 @@ func TestTestedBinFactory(t *testing.T) {
 			  vendorFirst: true,
 			}
 		`),
-		//"src.go":  nil,
 		"test-src.go": nil,
 	})
 
@@ -45,7 +44,7 @@ func TestTestedBinFactory(t *testing.T) {
 		t.Errorf("Error writing ninja file: %s", err)
 	} else {
 		text := buffer.String()
-		t.Logf("Gennerated ninja build file:\n%s", text)
+		t.Logf("Generated ninja build file:\n%s", text)
 		if !strings.Contains(text, "out/bin/test-out: ") {
 			t.Errorf("Generated ninja file does not have build of the test module")
 		}

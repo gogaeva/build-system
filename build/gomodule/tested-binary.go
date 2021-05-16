@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	pctx = blueprint.NewPackageContext("github.com/goga-eva/build-system/build/gomodule")
+	pctx = blueprint.NewPackageContext("github.com/gogaeva/build-system/build/gomodule")
 
 	goBuild = pctx.StaticRule("binaryBuild", blueprint.RuleParams{
 		Command:     "cd $workDir && go build -gcflags=\"all=-N -l\" -o $outputPath $pkg",
@@ -48,7 +48,7 @@ func (tb *testedBinaryModule) DynamicDependencies(blueprint.DynamicDependerModul
 func (tb *testedBinaryModule) GenerateBuildActions(ctx blueprint.ModuleContext) {
 	name := ctx.ModuleName()
 	config := bood.ExtractConfig(ctx)
-	config.Debug.Printf("Adding build actions for bo binary module %s", name)
+	config.Debug.Printf("Adding build actions for go binary module %s", name)
 
 	outputPath := path.Join(config.BaseOutputDir, "bin", name)
 	outputTestsPath := path.Join(config.BaseOutputDir, "reports", name, "test.txt")
