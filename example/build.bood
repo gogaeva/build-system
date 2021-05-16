@@ -1,0 +1,14 @@
+go_binary {
+    name: "example",
+    pkg: "github.com/gogaeva/build-system/example",
+    srcs: ["/*.go"],
+    srcsExclude: ["/*_test.go"],
+    testPkg: "github.com/gogaeva/build-system/example",
+    testSrcs: ["/*_test.go"],
+}
+
+go_doc {
+    name: "example_documentation",
+    pkg: "github.com/gogaeva/build-system/example",
+    srcs: ["/*.go"],
+}
