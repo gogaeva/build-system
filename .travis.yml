@@ -1,10 +1,12 @@
 language: go
 dist: focal
 go:
+  - 1.6
   - 1.5
 
 addons:
   apt:
+    update: true
     packages:
       - ninja-build
 
